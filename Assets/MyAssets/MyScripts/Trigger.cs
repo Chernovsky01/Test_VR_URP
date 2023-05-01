@@ -14,11 +14,17 @@ public class Trigger : MonoBehaviour
 
     void OnTriggerStay(Collider other)
     {
-        
+        if (other.tag == "ObjectForTrigger")
+        {
+            Debug.Log("Trigger working...");
+        }
     }
 
     void OnTriggerExit(Collider other)
     {
-        
+        if (other.tag == "ObjectForTrigger")
+        {
+            Debug.Log("Trigger anti-fired");
+        }
     }
 }
