@@ -14,9 +14,10 @@ public class MenuScriptVR : MonoBehaviour
         Debug.Log("You pressed the button");
     }
 
+    [System.Obsolete]
     public void ExitButton()
     {
-        if (!closingButtonBlock)
+        if (!closingButtonBlock.active)
         {
             Debug.Log("You pressed the exit button");
             Application.Quit();
